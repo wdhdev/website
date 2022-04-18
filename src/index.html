@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <title>William Harrison</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="William Harrison" property="og:title" />
+        <meta content="This is the personal website of William Harrison." property="og:description" />
+        <meta content="https://williamdavidharrison.com.au" property="og:url" />
+        <meta content="https://files.williamharrison.xyz/images/wh_logo.png" property="og:image" />
+        <meta content="#0096ff" data-react-helmet="true" name="theme-color" />
+        <link rel="shortcut icon" href="https://files.williamharrison.xyz/images/favicon.ico">
+        
+        <link rel="stylesheet" type="text/css" href="css/loading.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div class="loader">
+            <div class="loading"></div>
+        </div>
+
+        <div class="profile-card">
+            <div class="card-header">
+                <div class="picture">
+                    <img src="https://files.williamharrison.xyz/gifs/w_logo_glitch.gif">
+                  </div>
+                  <div class="name">William Harrison</div>
+                  <div class="desc">IT Enthusiast</div>
+                  <div class="sm">
+                    <a href="https://www.facebook.com/wdharrison09" class="fab fa-facebook" title="Facebook"></a>
+                    <a href="https://twitter.com/wdharrison09" class="fab fa-twitter" title="Twitter"></a>
+                    <a href="https://www.instagram.com/wdharrison09" class="fab fa-instagram" title="Instagram"></a>
+                  </div>
+                  <a href="mailto:william@williamdavidharrison.com.au" class="contact-btn">Contact Me</a>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+                box-sizing: border-box;
+                font-family: "Ubuntu", sans-serif;
+            }
+
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+            }
+
+            .sm-menu {
+                position: fixed;
+                top: 50%;
+                right: -200px;
+                width: 200px;
+                background-color: #2c3a47;
+                transition: .4s linear;
+            }
+
+            .sm-menu.active {
+                right: 0;
+            }
+
+            .sm-menu a {
+                display: block;
+                padding: 15px 5px;
+                color: #f1f1f1;
+                font-size: 20px;
+                transition: .4s linear;
+            }
+
+            .sm-menu a i {
+                width: 40px;
+                font-size: 24px;
+                text-align: center;
+            }
+
+            .sm-menu a:hover {
+                background-color: #f1f1f133;
+            }
+
+            .toggle-btn {
+                position: absolute;
+                left: -40px;
+                top: 0;
+                width: 40px;
+                height: 60px;
+                background: #2c3a47;
+                color: #f1f1f1;
+                line-height: 60px;
+                text-align: center;
+                font-size: 20px;
+                cursor: pointer;
+            }
+        </style>
+
+        <div class="sm-menu" title="Social Media">
+            <div class="toggle-btn fas fa-chevron-left"></div>
+
+            <a href="https://www.facebook.com/wdharrison09" title="Facebook">
+                <i class="fab fa-facebook"></i>
+                Facebook
+            </a>
+
+            <a href="https://twitter.com/wdharrison09" title="Twitter">
+                <i class="fab fa-twitter"></i>
+                Twitter
+            </a>
+
+            <a href="https://www.instagram.com/wdharrison09" title="Instagram">
+                <i class="fab fa-instagram"></i>
+                Instagram
+            </a>
+
+            <a href="https://www.reddit.com/u/williamdavidharrison" title="Reddit">
+                <i class="fab fa-reddit"></i>
+                Reddit
+            </a>
+
+            <a href="https://www.youtube.com/channel/UCzHwrpKSSMcnt-srjRqQqjg" title="YouTube">
+                <i class="fab fa-youtube"></i>
+                YouTube
+            </a>
+
+            <a href="https://discord.gg/wADVBmQkgg" title="Discord">
+                <i class="fab fa-discord"></i>
+                Discord
+            </a>
+
+            <a href="https://github.com/williamdavidharrison" title="GitHub">
+                <i class="fab fa-github"></i>
+                GitHub
+            </a>
+        </div>
+
+        <script>
+            $(".toggle-btn").click(function() {
+                $(".sm-menu").toggleClass("active");
+                $(this).toggleClass("fa-chevron-right");
+            })
+        </script>
+
+        <script type="text/javascript">
+            window.addEventListener("load", function () {
+                const loader = document.querySelector(".loader");
+                loader.className += " hidden";
+            })
+        </script>
+    </body>
+</html>
