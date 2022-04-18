@@ -2,3 +2,5 @@
 
 # williamdavidharrison.com.au
 Personal Website for William Harrison.
+
+I will add hosting instructions soon.
