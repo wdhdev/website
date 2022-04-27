@@ -67,15 +67,15 @@ body {
 }
   
 .name {
-    color: #f1f1f1;
+    color: #ffffff;
     font-size: 28px;
     font-weight: 600;
     margin: 10px 0;
 }
   
 .desc {
-    font-size: 18px;
-    color: #74b9ff;
+    font-size: 20px;
+    color: #19ABFF;
   }
   
 .sm {
@@ -85,22 +85,23 @@ body {
 }
   
 .sm a {
-    color: #f1f1f1;
-    width: 56px;
-    font-size: 22px;
+    color: #ffffff;
+    margin-top: 10px;
+    width: 60px;
+    font-size: 24px;
     transition: .3s linear;
 }
   
 .sm a:hover {
-    color: #f1f1f17f;
+    color: #ffffffa5;
 }
   
 .contact-btn {
     display: inline-block;
     padding: 12px 50px;
-    background-color: #f1f1f1;
-    color: black;
-    border: 2px solid #f1f1f1;
+    background-color: #0091E666;
+    color: white;
+    border: 2px solid #e66767;
     border-radius: 6px;
     margin-top: 16px;
     transition: .3s linear;
@@ -108,8 +109,7 @@ body {
 }
   
 .contact-btn:hover {
-    background: #f1f1f133;
-    color: #f1f1f1;
+    background: #0091E633;
 }
   
 .card-footer {
