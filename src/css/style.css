@@ -15,7 +15,7 @@
   
 body {
     height: 100vh;
-    background: url(https://files.williamharrison.xyz/images/background.jpg) no-repeat center;
+    background: url(../assets/background.jpg) no-repeat center;
     background-size: cover;
     display: flex;
     align-items: center;
