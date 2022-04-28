@@ -44,20 +44,23 @@ body {
     animation: animated-gradient 2s linear infinite;
 }
   
-@keyframes animated-gradient{
+@keyframes animated-gradient {
     25% {
         background-position: left bottom;
     }
+
     50% {
       background-position: right bottom;
     }
+
     75% {
       background-position: right top;
     }
+
     100% {
       background-position: left top;
     }
-  }
+}
   
 .picture img {
     display: block;
@@ -74,35 +77,34 @@ body {
 }
   
 .desc {
-    font-size: 20px;
+    font-size: 18px;
     color: #19ABFF;
-  }
-  
+}
+
 .sm {
     display: flex;
     justify-content: center;
     margin: 20px 0;
 }
-  
+
 .sm a {
     color: #ffffff;
-    margin-top: 10px;
-    width: 60px;
-    font-size: 24px;
-    transition: .3s linear;
+    font-size: 22px;
+    margin: 0 10px;
+    width: 30px;
+    transition: .2s linear;
 }
-  
+
 .sm a:hover {
     color: #ffffffa5;
 }
-  
+
 .contact-btn {
     display: inline-block;
     padding: 12px 50px;
     background-color: #0091E666;
     color: white;
     border: 2px solid #e66767;
-    border-radius: 6px;
     margin-top: 16px;
     transition: .3s linear;
     border-radius: 25px;
