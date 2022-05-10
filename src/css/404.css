@@ -31,13 +31,13 @@
 
 #container .content h4 {
     font-size: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     color: #ffffff;
 }
 
 #container .content p {
     color: #ffffff;
-    font-size: 1.2em;
+    font-size: 20px;
 }
 
 #container .content a {
