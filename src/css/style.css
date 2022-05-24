@@ -12,7 +12,7 @@
     margin-right: auto;
     width: 50%;
 }
-  
+
 body {
     height: 100vh;
     background: url(../assets/background.jpg) no-repeat center;
@@ -21,29 +21,29 @@ body {
     align-items: center;
     justify-content: center;
 }
-  
+
 .profile-card {
     width: 400px;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
 }
-  
+
 .card-header {
     background: #2c3a47;
     padding: 60px 40px;
 }
-  
+
 .picture {
     display: inline-block;
-    padding: 4px;
+    padding: 3px;
     background: linear-gradient(130deg, #74b9ff, #e66767);
     margin: auto;
     border-radius: 50%;
     background-size: 200% 200%;
     animation: animated-gradient 2s linear infinite;
 }
-  
+
 @keyframes animated-gradient {
     25% {
         background-position: left bottom;
@@ -61,21 +61,21 @@ body {
       background-position: left top;
     }
 }
-  
+
 .picture img {
     display: block;
     width: 100px;
     height: 100px;
     border-radius: 50%;
 }
-  
+
 .name {
     color: #ffffff;
     font-size: 28px;
     font-weight: 600;
     margin: 10px 0;
 }
-  
+
 .desc {
     font-size: 18px;
     color: #19ABFF;
@@ -84,13 +84,13 @@ body {
 .sm {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin: 24px 0;
 }
 
 .sm a {
     color: #ffffff;
     font-size: 22px;
-    margin: 0 10px;
+    margin: 0 6px;
     width: 30px;
     transition: .2s linear;
 }
@@ -104,24 +104,12 @@ body {
     padding: 12px 50px;
     background-color: #0091E666;
     color: white;
-    /* border: 2px solid #e66767; */
-    border: 2px solid lightseagreen;
-    margin-top: 16px;
+    border: 2px solid #19ABFF;
+    margin-top: 2px;
     transition: .3s linear;
     border-radius: 25px;
 }
-  
+
 .contact-btn:hover {
     background: #0091E633;
-}
-  
-.card-footer {
-    background: #f4f4f4;
-    padding: 60px 10px;
-}
-  
-.border {
-    width: 1px;
-    height: 30px;
-    background: #bbb;
 }
