@@ -34,6 +34,12 @@ body {
     padding: 60px 40px;
 }
 
+.picture {
+    display: inline-block;
+    margin: auto;
+    border-radius: 50%;
+}
+
 .picture img {
     display: block;
     width: 100px;
