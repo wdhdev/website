@@ -42,7 +42,6 @@ body {
 
 .picture img {
     display: block;
-    border: 2px solid #19ABFF;
     width: 100px;
     height: 100px;
     border-radius: 50%;
