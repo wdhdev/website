@@ -37,7 +37,7 @@ body {
 .picture {
     display: inline-block;
     margin: auto;
-    border: #19ABFF solid 1px;
+    border: 2px solid #19ABFF;
     border-radius: 50%;
 }
 
