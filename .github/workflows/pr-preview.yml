@@ -20,10 +20,17 @@ jobs:
         with:
           ref: refs/pull/${{ github.event.pull_request.number }}/merge
 
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
       - if: ${{ github.event.action == 'preview'}}
         run: gh repo create wdh-bot/${{ github.event.pull_request.number }} --public
         env:
           GITHUB_TOKEN: ${{ secrets.BOT }}
+
+      - name: Build Project
+        run: npm run ghbuild
 
       - uses: peaceiris/actions-gh-pages@v3
         with:
