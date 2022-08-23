@@ -2,4 +2,4 @@
 My Personal Website
 
 ## Notes
-> Hosted on [Cloudflare Pages](https://pages.cloudflare.com)
+Hosted on [Cloudflare Pages](https://pages.cloudflare.com)
