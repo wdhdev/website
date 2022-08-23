@@ -1,5 +1,5 @@
 # william.net.au
-My Personal Website
+Personal Website
 
 ## Notes
-Hosted on [Cloudflare Pages](https://pages.cloudflare.com)
+> Hosted on [Cloudflare Pages](https://pages.cloudflare.com)
