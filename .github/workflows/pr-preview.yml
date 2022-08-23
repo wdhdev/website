@@ -12,31 +12,29 @@ jobs:
       - uses: peter-evans/create-or-update-comment@v2
         id: couc
         with:
-          body: ⌛ **|** Deploy Preview - Build in Progress
+          body: ⌛ Deploy Preview - Build in Progress
           issue-number: ${{ github.event.pull_request.number }}
           token: ${{ secrets.BOT }}
 
       - uses: actions/checkout@v3
         with:
           ref: refs/pull/${{ github.event.pull_request.number }}/merge
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
+          
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build
 
       - if: ${{ github.event.action == 'preview'}}
-        run: gh repo create wdh-bot/${{ github.event.pull_request.number }} --public
+        run: gh repo create wdh-bot/website-${{ github.event.pull_request.number }} --public
         env:
           GITHUB_TOKEN: ${{ secrets.BOT }}
-
-      - name: Build Project
-        run: npm run ghbuild
 
       - uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.BOT }}
           publish_dir: ./build
-          external_repository: wdh-bot/${{ github.event.pull_request.number }}
+          external_repository: wdh-bot/website-${{ github.event.pull_request.number }}
 
       - name: Sleep - Page Gets Updates
         run: sleep 1m
@@ -46,9 +44,9 @@ jobs:
         uses: peter-evans/create-or-update-comment@v2
         with:
           body: |
-            ✅ **|** Deploy Successful
-            😎 **|** Preview: https://preview.williamharrison.dev/${{ github.event.pull_request.number }}
-            🔍 **|** Deploy Log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            ✅ Deploy Successful
+            🚀 Preview: https://preview.williamharrison.dev/website-${{ github.event.pull_request.number }}
+            🔍 Deploy Log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           comment-id: ${{ steps.couc.outputs.comment-id }}
           edit-mode: replace
           token: ${{ secrets.BOT }}
@@ -57,8 +55,8 @@ jobs:
         uses: peter-evans/create-or-update-comment@v2
         with:
           body: |
-            ❌ **|** Deploy Preview Failed
-            🔍 **|** Deploy Log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            ❌ Deploy Preview Failed
+            🔍 Deploy Log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           comment-id: ${{ steps.couc.outputs.comment-id }}
           edit-mode: replace
           token: ${{ secrets.BOT }}
