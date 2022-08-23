@@ -1,5 +1,5 @@
 # william.net.au
-Personal Website for William Harrison.
+My Personal Website
 
 ## Notes
 > Hosted on [Cloudflare Pages](https://pages.cloudflare.com)
