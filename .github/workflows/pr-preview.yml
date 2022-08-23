@@ -20,17 +20,10 @@ jobs:
         with:
           ref: refs/pull/${{ github.event.pull_request.number }}/merge
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
       - if: ${{ github.event.action == 'preview'}}
         run: gh repo create wdh-bot/website-${{ github.event.pull_request.number }} --public
         env:
           GITHUB_TOKEN: ${{ secrets.BOT }}
-
-      - name: Build Project
-        run: npm run ghbuild
 
       - uses: peaceiris/actions-gh-pages@v3
         with:
@@ -46,9 +39,9 @@ jobs:
         uses: peter-evans/create-or-update-comment@v2
         with:
           body: |
-            ✅ Deploy Successful
-            😎 Preview: https://preview.williamharrison.dev/website-${{ github.event.pull_request.number }}
-            🔍 Deploy Log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            ✅ | Deploy Successful
+            😎 | Preview: https://preview.williamharrison.dev/website-${{ github.event.pull_request.number }}
+            🔍 | Deploy Log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           comment-id: ${{ steps.couc.outputs.comment-id }}
           edit-mode: replace
           token: ${{ secrets.BOT }}
@@ -57,8 +50,8 @@ jobs:
         uses: peter-evans/create-or-update-comment@v2
         with:
           body: |
-            ❌ Deploy Preview Failed
-            🔍 Deploy Log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            ❌ | Deploy Preview Failed
+            🔍 | Deploy Log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           comment-id: ${{ steps.couc.outputs.comment-id }}
           edit-mode: replace
           token: ${{ secrets.BOT }}
