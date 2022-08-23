@@ -29,9 +29,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.BOT }}
 
-      - name: Install NPM packages
-        run: npm ci
-
       - name: Build Project
         run: npm run ghbuild
 
@@ -49,7 +46,7 @@ jobs:
         uses: peter-evans/create-or-update-comment@v2
         with:
           body: |
-            ✅ Deploy Preview Ready
+            ✅ Deploy Successful
             😎 Preview: https://preview.williamharrison.dev/website-${{ github.event.pull_request.number }}
             🔍 Deploy Log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           comment-id: ${{ steps.couc.outputs.comment-id }}
