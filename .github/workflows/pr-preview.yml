@@ -25,15 +25,18 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.BOT }}
 
-      - uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          personal_token: ${{ secrets.BOT }}
-          publish_dir: ./build
-          external_repository: wdh-bot/website-${{ github.event.pull_request.number }}
+          folder: ./build
+          token: ${{ secrets.BOT }}
+          repository-name: wdh-bot/website-${{ github.event.pull_request.number }}
 
-      - name: Sleep - Page Gets Updates
-        run: sleep 1m
-        shell: bash
+#       - uses: peaceiris/actions-gh-pages@v3
+#         with:
+#           personal_token: ${{ secrets.BOT }}
+#           publish_dir: ./build
+#           external_repository: wdh-bot/website-${{ github.event.pull_request.number }}
 
       - name: comment Preview Ready
         uses: peter-evans/create-or-update-comment@v2
@@ -46,7 +49,7 @@ jobs:
           edit-mode: replace
           token: ${{ secrets.BOT }}
 
-      - if: ${{ failure() }}
+      - if: ${{ deployment_status == 'failed' }}
         uses: peter-evans/create-or-update-comment@v2
         with:
           body: |
