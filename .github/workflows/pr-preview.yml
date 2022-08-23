@@ -24,8 +24,8 @@ jobs:
         with:
           node-version: 16
 
-      - if: ${{ github.event.action == "opened"}}
-        run: gh repo create wdh-bot/${{ github.event.repository.name }}-${{ github.event.pull_request.number }} --public
+      - if: ${{ github.event.action == 'preview'}}
+        run: gh repo create wdh-bot/website-${{ github.event.pull_request.number }} --public
         env:
           GITHUB_TOKEN: ${{ secrets.BOT }}
 
@@ -39,9 +39,9 @@ jobs:
         with:
           personal_token: ${{ secrets.BOT }}
           publish_dir: ./build
-          external_repository: wdh-bot/${{ github.event.repository.name }}-${{ github.event.pull_request.number }}
+          external_repository: wdh-bot/website-${{ github.event.pull_request.number }}
 
-      - name: Sleep (Page gets updated)
+      - name: Sleep - Page Gets Updates
         run: sleep 1m
         shell: bash
 
@@ -50,7 +50,7 @@ jobs:
         with:
           body: |
             ✅ Deploy Preview Ready
-            😎 Preview: https://preview.williamharrison.dev.dev/${{ github.event.repository.name }}-${{ github.event.pull_request.number }}
+            😎 Preview: https://preview.williamharrison.dev/website-${{ github.event.pull_request.number }}
             🔍 Deploy Log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           comment-id: ${{ steps.couc.outputs.comment-id }}
           edit-mode: replace
