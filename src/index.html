@@ -8,44 +8,66 @@
         <title>William Harrison</title>
         <link rel="shortcut icon" href="/assets/favicon.ico">
 
-        <meta content="william.net.au" property="og:application-name">
-        <meta content="William Harrison" property="og:title">
-        <meta content="Personal Website for William Harrison" property="og:description">
-        <meta content="https://william.net.au" property="og:url">
-        <meta content="https://william.net.au/assets/wh_logo.png" property="og:image">
-        <meta content="#0096ff" data-react-helmet="true" name="theme-color">
+        <meta name="description" content="Personal Website for William Harrison">
+        <meta name="theme-color" content="#0096ff">
 
+        <!-- Google / Search Engine Tags -->
+        <meta itemprop="name" content="William Harrison">
+        <meta itemprop="description" content="Personal Website for William Harrison">
+        <meta itemprop="image" content="https://william.net.au/assets/wh_logo.png">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://william.net.au">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="William Harrison">
+        <meta property="og:description" content="Personal Website for William Harrison">
+        <meta property="og:image" content="https://william.net.au/assets/wh_logo.png">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="William Harrison">
+        <meta name="twitter:description" content="Personal Website for William Harrison">
+        <meta name="twitter:image" content="https://william.net.au/assets/wh_logo.png">
+
+        <!-- Stylesheets -->
         <link rel="stylesheet" href="/css/loader.css">
         <link rel="stylesheet" href="/css/index.css">
-
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+        <!-- Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
 
     <body>
+        <!-- Loader -->
         <div class="loader">
             <div class="loading"></div>
         </div>
 
         <div class="profile-card">
             <div class="card-header">
+                <!-- Picture -->
                 <div class="picture">
                     <img src="/assets/w_logo_glitch.gif">
                 </div>
 
+                <!-- Bio -->
                 <div class="name">William Harrison</div>
                 <div class="desc">IT Enthusiast</div>
 
+                <!-- Social Media -->
                 <div class="sm">
                     <a href="https://www.facebook.com/wdharrison09" class="fab fa-facebook" title="Facebook"></a>
                     <a href="https://twitter.com/wdharrison09" class="fab fa-twitter" title="Twitter"></a>
                     <a href="https://www.instagram.com/wdharrison09" class="fab fa-instagram" title="Instagram"></a>
                 </div>
 
+                <!-- Button -->
                 <a href="https://william.net.au/contact" class="btn">Contact Me</a>
             </div>
         </div>
 
+        <!-- Hide Loader -->
         <script type="text/javascript">
             window.addEventListener("load", function () {
                 const loader = document.querySelector(".loader");
