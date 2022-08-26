@@ -35,9 +35,10 @@ body {
 }
 
 .picture {
+    border-radius: 50%;
     display: inline-block;
     margin: auto;
-    border-radius: 50%;
+    margin-bottom: 15px
 }
 
 .picture img {
