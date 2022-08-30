@@ -92,15 +92,17 @@ body {
     background-color: #0091E633;
 }
 
+
+
 .share-btn {
     background: linear-gradient(30deg, #3498db, #5363d8);
     border: none;
     font-size: 20px;
     font-weight: 600;
-    padding: 8px 10px;
+    padding: 16px 20px;
     cursor: pointer;
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 40px;
     color: #ffffff;
     position: fixed;
     bottom: 25px;
@@ -108,7 +110,7 @@ body {
     transition: .3s;
     z-index: 97;
 }
-  
+
 .share-sm {
     position: absolute;
     display: flex;
@@ -118,35 +120,36 @@ body {
     bottom: 0;
     transform: translateY(100%);
 }
-  
+
 .share-sm a {
     color: #ffffff;
 }
-  
+
 .share-btn:hover {
-    padding: 16px 38px;
+    padding: 16px 10px;
     border-radius: 40px;
 }
-  
-.icon {
+
+.text, .icon {
     display: inline-block;
     transition: .3s;
     transition-delay: 60ms;
 }
-  
+
+.icon {
+    margin-right: 2px;
+}
+
 .share-sm a:nth-child(2) {
     transition-delay: 60ms;
 }
-  
-.share-sm a:nth-child(3) {
-    transition-delay: 120ms;
-}
-  
+
+.share-btn:hover .text,
 .share-btn:hover .icon,
 .share-btn:hover .share-sm a {
     transform: translateY(-40px);
 }
-  
+
 .share-sm a:hover {
     opacity: .7;
 }
