@@ -32,7 +32,6 @@
         <link rel="shortcut icon" href="/assets/favicon.ico">
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="/css/loader.css">
         <link rel="stylesheet" href="/css/index.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
@@ -41,11 +40,6 @@
     </head>
 
     <body>
-        <!-- Loader -->
-        <div class="loader">
-            <div class="loading"></div>
-        </div>
-
         <div class="profile-card">
             <div class="card-header">
                 <!-- Picture -->
@@ -79,17 +73,5 @@
                 <a href="https://twitter.com/intent/tweet?text=https://william.net.au"><i class="fab fa-twitter"></i></a>
             </div>
         </button>
-
-        <!-- Hide Loader -->
-        <script type="text/javascript">
-            window.addEventListener("load", function () {
-                const loader = document.querySelector(".loader");
-                loader.className += " hidden";
-
-                setTimeout(() => {
-                    loader.remove();
-                }, 1000);
-            })
-        </script>
     </body>
 </html>
