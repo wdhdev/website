@@ -1,7 +1,6 @@
 User-agent: *
 Disallow: /assets/404/*
 Disallow: /css/*
-Disallow: _redirects
 Disallow: 404.html
 Allow: /assets/*
 Allow: index.html
