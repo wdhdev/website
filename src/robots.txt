@@ -1,8 +1,11 @@
 User-agent: *
+
 Disallow: /assets/404/*
 Disallow: /css/*
 Disallow: 404.html
+
 Allow: /assets/*
 Allow: index.html
 Allow: potato.html
+
 Sitemap: sitemap.xml
