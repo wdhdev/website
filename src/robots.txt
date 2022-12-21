@@ -5,4 +5,6 @@ Disallow: _redirects
 Disallow: 404.html
 Allow: /assets/*
 Allow: index.html
+Allow: potato.html
+Allow: ඞ.html
 Sitemap: sitemap.xml
