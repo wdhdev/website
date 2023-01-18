@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Ubuntu";
     box-sizing: border-box;
     text-decoration: none;
 }
@@ -105,14 +105,15 @@ body {
 .btn {
     display: inline-block;
     padding: 12px 40px;
-    color: white;
+    color: #ffffff;
     font-size: 16px;
     border: 2px solid #19ABFF;
     margin-top: 2px;
-    border-radius: 25px;
+    border-radius: 2rem;
     transition: .3s linear;
+    background-color: #19ABFF66;
 }
 
 .btn:hover {
-    background-color: #0091E633;
+    background-color: #0091E6a5;
 }
