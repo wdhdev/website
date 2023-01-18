@@ -93,9 +93,13 @@ body {
 .sm a {
     color: #ffffff;
     font-size: 22px;
-    margin: 0 2px;
-    width: 30px;
-    transition: .5s;
+    margin: 0 4px;
+    width: 40px;
+    transition: .7s;
+}
+
+.sm img {
+    border-radius: 100%;
 }
 
 .sm a:hover {
