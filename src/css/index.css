@@ -50,12 +50,12 @@ body {
 .profile-card {
     width: 400px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 1rem;
     overflow: hidden;
 }
 
 .card-header {
-    background: #2c3a47;
+    background: #262626;
     padding: 60px 40px;
 }
 
@@ -87,19 +87,19 @@ body {
 .sm {
     display: flex;
     justify-content: center;
-    margin: 24px 0;
+    margin: 16px 0;
 }
 
 .sm a {
     color: #ffffff;
     font-size: 22px;
-    margin: 0 6px;
+    margin: 0 2px;
     width: 30px;
-    transition: .2s linear;
+    transition: .5s;
 }
 
 .sm a:hover {
-    color: #ffffffa5;
+    transform: scale(1.1);
 }
 
 .btn {
@@ -107,13 +107,13 @@ body {
     padding: 12px 40px;
     color: #ffffff;
     font-size: 16px;
-    border: 2px solid #19ABFF;
-    margin-top: 2px;
+    border: 2px solid #888888;
+    margin-top: 8px;
     border-radius: 2rem;
     transition: .3s linear;
-    background-color: #19ABFF66;
+    background-color: #19ABFF33;
 }
 
 .btn:hover {
-    background-color: #0091E6a5;
+    background-color: #0091E666;
 }
