@@ -1,8 +1,6 @@
 fetch("https://api.lanyard.rest/v1/users/853158265466257448")
     .then((res) => res.json())
     .then((res) => {
-        document.getElementById("picture").classList.add(res.data.discord_status);
-
         switch (res.data.discord_status) {
             case "offline":
                 document.getElementsByName("picture").style.border = "4px solid gray";
