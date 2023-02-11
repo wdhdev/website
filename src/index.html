@@ -51,7 +51,7 @@
         <div class="profile-card">
             <div class="card-header">
                 <!-- Picture -->
-                <div class="picture">
+                <div class="picture" id="picture">
                     <img src="/assets/pfp.gif" alt="Profile Picture">
                 </div>
 
@@ -80,16 +80,16 @@
 
                 switch (res.data.discord_status) {
                     case "offline":
-                        document.getElementsByName("picture").style.border = "4px solid gray";
+                        document.getElementsById("picture").style.border = "4px solid gray";
                         break;
                     case "idle":
-                        document.getElementsByName("picture").style.border = "4px solid yellow";
+                        document.getElementsById("picture").style.border = "4px solid yellow";
                         break;
                     case "dnd":
-                        document.getElementsByName("picture").style.border = "4px solid red";
+                        document.getElementsById("picture").style.border = "4px solid red";
                         break;
                     case "online":
-                        document.getElementsByName("picture").style.border = "4px solid lime";
+                        document.getElementsById("picture").style.border = "4px solid lime";
                         break;
                 }
             })
