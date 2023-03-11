@@ -59,13 +59,13 @@ body {
     padding: 60px 40px;
 }
 
-.picture {
+.pfp {
     border-radius: 100%;
     display: inline-block;
     margin: auto;
 }
 
-.picture img {
+.pfp img {
     display: block;
     width: 100px;
     height: 100px;
