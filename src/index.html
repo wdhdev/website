@@ -2,72 +2,258 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- HTML Meta Tags -->
         <title>William Harrison</title>
-        <meta name="description" content="A website displaying some information about me.">
+        <meta name="description" content="Hi, I'm William. I'm a full-stack developer from Australia with over 3 years of experience in over 5 programming languages.">
+        <meta name="theme-color" content="#0096ff">
 
         <!-- Google / Search Engine Tags -->
         <meta itemprop="name" content="William Harrison">
-        <meta itemprop="description" content="A website displaying some information about me.">
-        <meta itemprop="image" content="https://william.net.au/assets/meta/banner.png">
+        <meta itemprop="description" content="Hi, I'm William. I'm a full-stack developer from Australia with over 3 years of experience in over 5 programming languages.">
+        <meta itemprop="image" content="http://william.net.au/assets/organisations/meta/banner.png">
 
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://william.net.au">
         <meta property="og:type" content="website">
         <meta property="og:title" content="William Harrison">
-        <meta property="og:description" content="A website displaying some information about me.">
-        <meta property="og:image" content="https://william.net.au/assets/meta/banner.png">
+        <meta property="og:description" content="Hi, I'm William. I'm a full-stack developer from Australia with over 3 years of experience in over 5 programming languages.">
+        <meta property="og:image" content="http://william.net.au/assets/organisations/meta/banner.png">
 
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="William Harrison">
-        <meta name="twitter:description" content="A website displaying some information about me.">
-        <meta name="twitter:image" content="https://william.net.au/assets/meta/banner.png">
+        <meta name="twitter:description" content="Hi, I'm William. I'm a full-stack developer from Australia with over 3 years of experience in over 5 programming languages.">
+        <meta name="twitter:image" content="http://william.net.au/assets/organisations/meta/banner.png">
 
         <!-- Favicon -->
         <link rel="shortcut icon" href="/assets/favicon.ico">
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="/css/index.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
-    </head>
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP2ES1861V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-        gtag('config', 'G-LP2ES1861V');
-    </script>
+        <!-- Scripts -->
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
 
     <body>
-        <div class="profile-card">
-            <div class="card-header">
-                <!-- Picture -->
-                <div class="picture" id="pfp">
-                    <img src="/assets/pfp.gif" alt="Profile Picture">
+        <div class="bg-black">
+            <!-- <header class="absolute inset-x-0 top-0 z-50"> -->
+                <!-- <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+                    <div class="flex lg:flex-1"></div>
+
+                    <div class="flex lg:hidden">
+                        <button type="button"
+                            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        </button>
+                    </div>
+
+                    <div class="hidden lg:flex lg:gap-x-12 content-center">
+                        <a href="/" class="text-lg font-semibold leading-6 text-gray-200">Home</a>
+
+                        <a href="#organisations" class="text-lg font-semibold leading-6 text-gray-200">Organisations</a>
+                    </div>
+
+                    <div class="hidden lg:flex lg:flex-1 lg:justify-end"></div>
+                </nav> -->
+
+                <!-- Mobile menu, show/hide based on menu open state. -->
+                <!-- <div class="lg:hidden" role="dialog" aria-modal="true"> -->
+                <!-- Background backdrop, show/hide based on slide-over state. -->
+                <!-- <div class="fixed inset-0 z-50"></div> -->
+            <!-- </header> -->
+
+            <div class="relative isolate px-6 lg:px-8">
+                <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+                    <svg class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
+                        viewBox="0 0 1155 678">
+                        <path fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)" fill-opacity=".3"
+                            d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
+                        <defs>
+                            <linearGradient id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533" x1="1155.49" x2="-78.208" y1=".177"
+                                y2="474.645" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#9089FC" />
+                                <stop offset="1" stop-color="#FF80B5" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
                 </div>
 
-                <!-- Bio -->
-                <div class="name">William Harrison</div>
-
-                <!-- Social Media -->
-                <div class="sm">
-                    <a href="https://wdh.gg/facebook" title="Facebook"><img src="https://static-cdn.wdh.gg/social/facebook.svg"></a>
-                    <a href="https://wdh.gg/x" title="X"><img src="https://static-cdn.wdh.gg/social/x.svg"></a>
-                    <a href="https://wdh.gg/instagram" title="Instagram"><img src="https://static-cdn.wdh.gg/social/instagram.svg"></a>
+                <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-40">
+                    <div class="text-center">
+                        <img class="h-36 mb-6 mx-auto rounded-full" src="/assets/logo.gif" alt="WH Logo">
+                        <h1 class="text-4xl font-bold tracking-tight text-gray-200 sm:text-4xl">William Harrison</h1>
+                        <p class="mt-6 text-lg leading-8 text-gray-100">Hi, I'm William. I'm a full-stack developer from Australia with over 3 years of experience in over 5 programming languages. I have had an interest in technology for as long as I can remember. I enjoy coding and learning new things.</p>
+                    </div>
                 </div>
 
-                <!-- Button -->
-                <a href="https://wdh.gg/contact" class="btn">Contact Me</a>
+                <div
+                    class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+                    <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
+                        viewBox="0 0 1155 678">
+                        <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fill-opacity=".3"
+                            d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
+                        <defs>
+                            <linearGradient id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc" x1="1155.49" x2="-78.208" y1=".177"
+                                y2="474.645" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#9089FC" />
+                                <stop offset="1" stop-color="#FF80B5" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
             </div>
         </div>
-    </body>
 
-    <script src="https://static-cdn.wdh.gg/discord-status.js"></script>
+        <!-- Organisations -->
+        <div id="organisations" class="bg-black py-24 sm:py-32">
+            <div class="mx-auto grid max-w-7xl gap-y-20 gap-x-8 px-6 lg:px-8 xl:grid-cols-3">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl">My Organisations</h2>
+                    <p class="mt-6 text-lg leading-8 text-gray-400">In my free time, I work with these open source organisations.</p>
+                </div>
+
+                <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-6 xl:col-span-2">
+                    <div class="p-2 bg-gray-800 rounded-md">
+                        <li>
+                            <div class="flex items-center gap-x-6">
+                                <img class="h-18 w-16 rounded-md" src="/assets/organisations/free-domains.png" alt="Free Domains">
+
+                                <div>
+                                    <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-200">Free Domains</h3>
+                                    <p class="text-sm font-semibold leading-6 text-indigo-400">Owner</p>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+
+                    <div class="p-2 bg-gray-800 rounded-md">
+                        <li>
+                            <div class="flex items-center gap-x-6">
+                                <img class="h-18 w-16 rounded-md" src="/assets/organisations/globalchat.png" alt="Global Chat">
+
+                                <div>
+                                    <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-200">Global Chat</h3>
+                                    <p class="text-sm font-semibold leading-6 text-indigo-400">Owner</p>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+
+                    <div class="p-2 bg-gray-800 rounded-md">
+                        <li>
+                            <div class="flex items-center gap-x-6">
+                                <img class="h-18 w-16 rounded-md" src="/assets/organisations/dbh.png" alt="DanBot Hosting">
+
+                                <div>
+                                    <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-200">DanBot Hosting</h3>
+                                    <p class="text-sm font-semibold leading-6 text-indigo-400">Developer</p>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+
+                    <div class="p-2 bg-gray-800 rounded-md">
+                        <li>
+                            <div class="flex items-center gap-x-6">
+                                <img class="h-18 w-16 rounded-md" src="/assets/organisations/peerbrain.png" alt="Peer Brain">
+
+                                <div>
+                                    <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-200">Peer Brain</h3>
+                                    <p class="text-sm font-semibold leading-6 text-indigo-400">Developer</p>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+
+                    <div class="p-2 bg-gray-800 rounded-md">
+                        <li>
+                            <div class="flex items-center gap-x-6">
+                                <img class="h-18 w-16 rounded-md" src="/assets/organisations/is-a-dev.png" alt="is-a.dev">
+
+                                <div>
+                                    <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-200">is-a.dev</h3>
+                                    <p class="text-sm font-semibold leading-6 text-indigo-400">Maintainer</p>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+
+                    <div class="p-2 bg-gray-800 rounded-md">
+                        <li>
+                            <div class="flex items-center gap-x-6">
+                                <img class="h-18 w-16 rounded-md" src="/assets/organisations/open-domains.png" alt="Open Domains">
+
+                                <div>
+                                    <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-200">Open Domains</h3>
+                                    <p class="text-sm font-semibold leading-6 text-indigo-400">Maintainer</p>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+
+                    <div class="p-2 bg-gray-800 rounded-md">
+                        <li>
+                            <div class="flex items-center gap-x-6">
+                                <img class="h-18 w-16 rounded-md" src="/assets/organisations/is-a-good-dev.png" alt="is-a-good.dev">
+
+                                <div>
+                                    <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-200">is-a-good.dev</h3>
+                                    <p class="text-sm font-semibold leading-6 text-indigo-400">Helper</p>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <section class="bg-black">
+                <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+                    <hr class="h-0.5 mt-4 mb-2 bg-gray-700 border-none">
+                    <nav class="flex flex-wrap justify-center -mx-5 -my-2">
+                        <div class="px-5 py-2">
+                            <a href="https://williamharrison.blog" class="text-base leading-6 text-gray-500 hover:text-gray-600">Blog<i class="ml-2 fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+
+                        <div class="px-5 py-2">
+                            <a href="https://contact.wdh.gg" class="text-base leading-6 text-gray-500 hover:text-gray-600">Contact<i class="ml-2 fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+
+                        <div class="px-5 py-2">
+                            <a href="https://williamharrison.dev" class="text-base leading-6 text-gray-500 hover:text-gray-600">Developer Website<i class="ml-2 fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+
+                        <div class="px-5 py-2">
+                            <a href="https://github.com/sponsors/WilliamDavidHarrison" class="text-base leading-6 text-gray-500 hover:text-gray-600">Sponsor<i class="ml-2 fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </nav>
+
+                    <div class="flex justify-center mt-8 space-x-6">
+                        <a href="https://x.com/WDHarrison09" target="_blank" class="text-gray-400 hover:text-gray-500">
+                            <span class="sr-only">X</span>
+                            <i class="fa-xl fa-brands fa-x-twitter"></i>
+                        </a>
+
+                        <a href="https://github.com/WilliamDavidHarrison" class="text-gray-400 hover:text-gray-500">
+                            <span class="sr-only">GitHub</span>
+                            <i class="fa-xl fa-brands fa-github"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/williamdavidharrison" class="text-gray-400 hover:text-gray-500">
+                            <span class="sr-only">LinkedIn</span>
+                            <i class="fa-xl fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+
+                    <div class="space-y-0">
+                        <p class="mt-8 text-base leading-8 text-center text-gray-400">&copy; 2023 William Harrison - All Rights Reserved.</p>
+                        <p class="text-sm text-center text-gray-400">Website design taken from <a href="https://dibster.dev" class="underline underline-2 hover:no-underline">DIBSTER</a>.</p>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </body>
 </html>
