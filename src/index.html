@@ -37,6 +37,22 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
+    <style>
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-float {
+            animation: float 2s linear infinite;
+        }
+    </style>
+
     <body>
         <div class="bg-black">
             <div class="relative isolate px-6 lg:px-8">
@@ -60,6 +76,7 @@
                         <img class="h-36 mb-6 mx-auto rounded-full" src="/assets/logo.gif" alt="WH Logo">
                         <h1 class="text-4xl font-bold tracking-tight text-gray-200 sm:text-4xl">William Harrison</h1>
                         <p class="mt-6 text-lg leading-8 text-gray-100">Hi, I'm William. I'm a full-stack developer from Australia with over 3 years of experience in over 5 programming languages. I have had an interest in technology for as long as I can remember. I enjoy coding and learning new things.</p>
+                        <img class="h-8 mt-12 mx-auto animate-float" src="https://static-cdn.wdh.gg/assets/arrow_down.svg">
                     </div>
                 </div>
 
@@ -82,7 +99,7 @@
         </div>
 
         <!-- Organisations -->
-        <div id="organisations" class="bg-black py-24 sm:py-32">
+        <div id="organisations" class="bg-black py-24">
             <div class="mx-auto grid max-w-7xl gap-y-10 gap-x-8 px-6 lg:px-8 xl:grid-cols-3">
                 <div class="max-w-2xl">
                     <h2 class="text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl">My Organisations</h2>
