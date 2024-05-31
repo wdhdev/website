@@ -164,7 +164,7 @@
                         <p class="mt-6 text-lg leading-8 text-gray-400">Have any questions or want to get in touch? Send me a quick message here.</p>
                     </div>
 
-                    <form id="contact-form" class="mt-4 max-w-md" onsubmit="validateTurnstile()">
+                    <form id="contact-form" class="mt-4 max-w-md" onsubmit="submitForm()">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 gap-4">
                             <input type="text" id="first-name" placeholder="First Name" class="w-full text-white py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-gray-600 focus:outline-none focus:ring-0 focus:border-blue-600 peer mb-6" required>
                             <input type="text" id="last-name" placeholder="Last Name" class="w-full text-white py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-gray-600 focus:outline-none focus:ring-0 focus:border-blue-600 peer mb-6" required>
@@ -218,21 +218,49 @@
     </body>
 
     <script>
-        // Validate Turnstile
-        function validateTurnstile() {
+        const form = document.getElementById("contact-form");
+
+        const firstName = document.getElementById("first-name");
+        const lastName = document.getElementById("last-name");
+        const email = document.getElementById("email");
+        const message = document.getElementById("message");
+
+        const btn = document.getElementById("btn");
+
+        async function submitForm() {
             event.preventDefault();
 
-            const data = fetch("https://turnstile.william.net.au", {
+            btn.setAttribute("disabled", true);
+            btn.innerHTML = "Submitting...";
+
+            fetch("https://api.wdh.gg/forms/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
+                    firstname: firstName.value,
+                    lastname: lastName.value,
+                    email: email.value,
+                    message: message.value,
                     "cf-turnstile-response": document.querySelector('input[name="cf-turnstile-response"]').value
                 })
-            }).then(res => res.json());
+            }).then(res => res.json()).then(data => {
+                form.reset();
 
-            console.log(data);
+                btn.setAttribute("disabled", false);
+                btn.innerHTML = "Submit";
+
+                if(data.code === "FORM_SUBMITTED") {
+                    alert("Your contact form has been submitted successfully, I will get back to you soon.");
+                } else if(data.code === "RATE_LIMITED") {
+                    alert("Too many requests, please try again later.");
+                } else if(data.code === "CAPTCHA_FAILED") {
+                    alert("Captcha verification failed, please try again.");
+                } else {
+                    alert("An error occurred, please try again.");
+                }
+            })
         }
     </script>
 </html>
