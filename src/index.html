@@ -248,17 +248,13 @@
             }).then(res => res.json()).then(data => {
                 form.reset();
 
-                btn.setAttribute("disabled", false);
+                btn.removeAttribute("disabled");
                 btn.innerHTML = "Submit";
 
-                if(data.code === "FORM_SUBMITTED") {
-                    alert("Your contact form has been submitted successfully, I will get back to you soon.");
-                } else if(data.code === "RATE_LIMITED") {
-                    alert("Too many requests, please try again later.");
-                } else if(data.code === "CAPTCHA_FAILED") {
-                    alert("Captcha verification failed, please try again.");
+                if([200, 400, 403, 429].includes(data.status)) {
+                    alert(data.message);
                 } else {
-                    alert("An error occurred, please try again.");
+                    alert(`An error occurred, please try again.\nError: ${data.message}`);
                 }
             })
         }
