@@ -1,3 +1,9 @@
 window.onload = function() {
-    document.getElementById("loader").classList.add("loader-hidden");
+    const loader = document.getElementById("loader");
+
+    loader.classList.add("loader-hidden");
+
+    setTimeout(() => {
+        loader.remove();
+    }, 1000);
 }
