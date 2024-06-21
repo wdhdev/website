@@ -8,6 +8,7 @@ fetch("https://ghs.vercel.app/v3/sponsors/wdhdev").then((res) => res.json()).the
     let sponsors = [];
 
     if(data.sponsors.current !== null) sponsors = [...data.sponsors.current];
+    if(data.sponsors.past !== null) sponsors = [...sponsors, ...data.sponsors.past];
 
     if(!sponsors.length) {
         sponsorsLoader.classList.add("hidden");
