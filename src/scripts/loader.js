@@ -1,4 +1,5 @@
 const loader = document.getElementById("loader");
+const loaderPercentage = document.getElementById("loader-percentage");
 
 window.onload = async function() {
     // Fetch sponsors
@@ -7,28 +8,34 @@ window.onload = async function() {
     // Wait for all images to load
     await new Promise((resolve) => {
         const images = document.querySelectorAll("img");
+
         let loaded = 0;
-        images.forEach((image) => {
+
+        const updatePercentage = async () => {
+            const percentage = Math.round((loaded / images.length) * 100);
+            loaderPercentage.textContent = `${percentage}%`;
+        }
+
+        images.forEach(async (image) => {
             if(image.complete) {
                 loaded++;
+                updatePercentage();
             } else {
-                image.addEventListener("load", () => {
+                image.addEventListener("load", async () => {
                     loaded++;
-                    if(loaded === images.length) {
-                        resolve();
-                    }
+                    updatePercentage();
+                    if(loaded === images.length) resolve();
                 })
             }
         })
 
-        if(loaded === images.length) {
-            resolve();
-        }
+        if(loaded === images.length) resolve();
     })
 
+    document.body.style.overflow = "auto";
     loader.classList.add("loader-hidden");
 
     setTimeout(() => {
         loader.remove();
-    }, 1000);
+    }, 1000)
 }
