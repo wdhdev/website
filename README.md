@@ -5,4 +5,4 @@ A website showcasing my interests, hobbies, organisations and more.
 
 ---
 
-When copying **ANY** code from this repository, **provide credit** and please do not just straight up copy everything, at least try to be different.
+When copying **ANY** code from this repository, **provide credit to me, the author**. Please do not just copy everything and use it for yourself.
