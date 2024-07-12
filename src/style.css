@@ -1,3 +1,28 @@
+/* Floating Arrow */
+.animate-float {
+    animation: float 2s linear infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Loader */
+#loader {
+    transition: linear 1s;
+}
+
+.loader-hidden {
+    opacity: 0;
+}
+
+/* Scroll Bar */
 body::-webkit-scrollbar {
     width: 16px;
     background-color: #333333;
@@ -22,3 +47,8 @@ body::-webkit-scrollbar-thumb:hover {
 html {
     scroll-behavior: smooth;
 }
+
+/* TailwindCSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

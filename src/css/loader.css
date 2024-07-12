@@ -1,7 +1,0 @@
-#loader {
-    transition: linear 1s;
-}
-
-.loader-hidden {
-    opacity: 0;
-}
