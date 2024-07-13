@@ -4,7 +4,7 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                main: "url('../assets/background.jpg')"
+                main: "url('../assets/background.jpg')" // Uses ../ as the build output is in the dist/ directory
             }
         }
     },
