@@ -7,7 +7,11 @@ const noSponsors = document.getElementById("no-sponsors");
 fetch("https://ghs.vercel.app/v3/sponsors/wdhdev").then((res) => res.json()).then(async (data) => {
     let sponsors = [];
 
-    if(data.sponsors.current !== null) sponsors = [...data.sponsors.current];
+    // Sentry
+    // Manually added as they sponsor my business plan, which isn't on GitHub Sponsors
+    sponsors.push({ username: "getsentry" });
+
+    if(data.sponsors.current !== null) sponsors = [...sponsors, ...data.sponsors.current];
     if(data.sponsors.past !== null) sponsors = [...sponsors, ...data.sponsors.past];
 
     if(!sponsors.length) {
