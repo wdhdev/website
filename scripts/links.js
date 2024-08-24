@@ -1,5 +1,5 @@
-const sentry = document.getElementById("link-sentry");
+const index = document.getElementById("link-index");
 
-sentry.addEventListener("click", () => {
-    window.open("https://wdh.gg/sentry", "_blank");
+index.addEventListener("click", () => {
+    window.location = "/";
 })
