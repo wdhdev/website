@@ -13,7 +13,7 @@ async function submitForm() {
     btn.setAttribute("disabled", true);
     btn.innerHTML = "Submitting...";
 
-    fetch("https://n8n.wdh.app/webhook/71604b33-0b10-4104-bc1b-877c74d99fdb", {
+    fetch("https://n8n.hrsn.dev/webhook/71604b33-0b10-4104-bc1b-877c74d99fdb", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
