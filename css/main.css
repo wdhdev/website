@@ -48,6 +48,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Carbon Ads */
+#carbonads .carbon-poweredby {
+    color: #ffffff;
+}
+
 /* TailwindCSS */
 @tailwind base;
 @tailwind components;
