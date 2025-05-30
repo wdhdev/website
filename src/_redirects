@@ -1,2 +1,2 @@
-/blog https://blog.wharrison.com.au
-/blog/* https://blog.wharrison.com.au/:splat
+/blog https://wharrison.dev
+/blog/* https://wharrison.dev/:splat
