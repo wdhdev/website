@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+.bg-main {
+    background-image: url("../assets/background.jpg");
+}
+
 /* Floating Arrow */
 .animate-float {
     animation: float 2s linear infinite;
