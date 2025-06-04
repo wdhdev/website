@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* Floating Arrow */
 .animate-float {
     animation: float 2s linear infinite;
@@ -47,13 +49,3 @@ body::-webkit-scrollbar-thumb:hover {
 html {
     scroll-behavior: smooth;
 }
-
-/* Carbon Ads */
-#carbonads .carbon-poweredby {
-    color: #ffffff;
-}
-
-/* TailwindCSS */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
